@@ -1,13 +1,22 @@
 import { Body } from "./components/Body/index"
-import { Navbar } from "./components/Navbar/index"
+import { Route, Router, Routes } from "react-router-dom"
+import Login from "./components/Login/login"
+import Layout from "./components/Layout/Layout"
 
 function App() {
 
   return (
-    <div className="App">
-      <Navbar />
-      <Body />
-    </div>
+
+    
+      <Layout>
+    <Routes>
+      
+      <Route path="/" element={<Body/>} />
+      <Route path="/login" element={<Login/>} />
+      
+    </Routes>
+    </Layout>
+ 
   )
 }
 
